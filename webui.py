@@ -35,7 +35,7 @@ def generate_clicked(*args):
     task = worker.AsyncTask(args=list(args))
     finished = False
 
-    yield gr.update(visible=True, value=modules.html.make_progress_html(1, 'Waiting for task to start ...')), \
+    yield gr.update(visible=True, value=modules.html.make_progress_html(1, 'Waiting for task to start dumbass...')), \
         gr.update(visible=True, value=None), \
         gr.update(visible=False, value=None), \
         gr.update(visible=False)
@@ -72,13 +72,13 @@ def generate_clicked(*args):
                 finished = True
 
     execution_time = time.perf_counter() - execution_start_time
-    print(f'Total time: {execution_time:.2f} seconds')
+    print(f'Total time: {execution_time:.2f} lightyears... lol')
     return
 
 
 reload_javascript()
 
-title = f'Fooocus {fooocus_version.version}'
+title = f'ImaGen {fooocus_version.version}'
 
 if isinstance(args_manager.args.preset, str):
     title += ' ' + args_manager.args.preset
